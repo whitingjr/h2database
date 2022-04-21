@@ -369,6 +369,8 @@ public abstract class TraceObject {
                 int errorCode = e.getErrorCode();
                 if (errorCode >= 23000 && errorCode < 24000) {
                     trace.info(e, "exception");
+                } else if (errorCode == 50100) {
+                	trace.info(e, "exception");
                 } else {
                     trace.error(e, "exception");
                 }
